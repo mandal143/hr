@@ -234,7 +234,7 @@ def grievance_dashboard(request,id):
 def payroll_dashboard(request,id):
     user =  User.objects.get(id=id)
     payroll = Payrolls.objects.all()
-    return render(request, app + '/Payroll_dashboard.html', {'payroll_lists': payroll, 'user': user  })
+    return render(request, app + '/payroll_dashboard.html', {'payroll_lists': payroll, 'user': user  })
 	
 	
 def add_payroll(request,id):
