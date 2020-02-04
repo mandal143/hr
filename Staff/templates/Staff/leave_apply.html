@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+input[type=textarea]  {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+input[type=date]  {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+</style>
+</head>
+<body>
+
+
+<span class="w3-bar-item w3-left"><button onclick="goBack()">Go Back</button></span>
+<br/>
+<br/>
+
+{{ user }}
+<h3>Leave Application Form</h3>
+
+<div class="container">
+  <form method='post' action="{% url 'Staff:leave_apply_save' id=user.id %}" enctype="multipart/form-data">
+    
+  Total No of Days :<br>
+  <input type="text" name="leave_no_of_days" placeholder="1" required>
+  <br>
+  <br>
+  <br>
+  
+  Leave From Date:<br>
+  <input type="date" name="leave_from_date"  required>
+  <br>
+  <br>
+  <br>
+  
+  Leave To Date:<br>
+  <input type="date" name="leave_to_date" required>
+  <br>
+  <br>
+  <br>
+  
+  Leave Reason:<br>
+  <textarea type="text" name="leave_reason"  required></textarea>
+  <br>
+  <br>
+  <br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+</body>
+</html>

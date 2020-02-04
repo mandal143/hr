@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+</style>
+</head>
+<body>
+
+<span class="w3-bar-item w3-left"><button onclick="goBack()">Go Back</button></span>
+<h3> Payroll Form</h3>
+user : {{ user }}
+<div class="container">
+  <form method='post' action="{% url 'Administration:add_payroll_save' id=user.id %}" enctype="multipart/form-data">
+ 
+ Employee Name:<br/> 
+
+  <select id="user" name="user"   required>
+   <option  selected value=''>---SELECT---</option>
+    {% for user in user_all %}
+   <option value="{{ user.id }}">{{ user.get_full_name|upper }}</option>
+    {% endfor %} 
+  </select>
+
+<br>
+
+Select Salary Month:<br/>	
+    <select id='pay_month' name='pay_month'    required>
+                     <option selected value=''>--SELECT--</option>                  
+                     <option>Nov-Dec 19</option>
+                     <option>Dec-Jan 20</option>
+					 <option>Jan-Feb 20</option>
+                     <option>Feb-Mar 20</option>
+                     <option>Mar-Apr 20</option>
+                     <option>Apr-May 20</option>
+                     <option>May-Jun 20</option>
+                     <option>Jun-Jul 20</option>
+                     <option>Jul-Aug 20</option>
+                     <option>Aug-Sep 20</option>
+                     <option>Sep-Oct 20</option>
+                     <option>Oct-Nov 20</option>
+                     <option>Nov-Dec 20</option>
+                     <option>Dec-Jan 21</option>
+					 <option>Jan-Feb 21</option>
+                     <option>Feb-Mar 21</option>
+                     <option>Mar-Apr 21</option>
+                     <option>Apr-May 21</option>
+                     <option>May-Jun 21</option>
+                     <option>Jun-Jul 21</option>
+                     <option>Jul-Aug 21</option>
+                     <option>Aug-Sep 21</option>
+                     <option>Sep-Oct 21</option>
+                     <option>Oct-Nov 21</option>
+                     <option>Nov-Dec 21</option>
+					 <option>Dec-Jan 22</option>
+					 <option>Jan-Feb 22</option>
+                     <option>Feb-Mar 22</option>
+                     <option>Mar-Apr 22</option>
+                     <option>Apr-May 22</option>
+                     <option>May-Jun 22</option>
+                     <option>Jun-Jul 22</option>
+                     <option>Jul-Aug 22</option>
+                     <option>Aug-Sep 22</option>
+                     <option>Sep-Oct 22</option>
+                     <option>Oct-Nov 22</option>
+                     <option>Nov-Dec 22</option>                    
+  </select>	
+  
+  <br/>
+  Gross Salary:<br>
+   <input type="text" name="gross_salary" value="0" required >
+  <br>
+	
+  No of Leaves Taken:<br>
+  <input type="text" name="no_of_leaves" value="0" required>
+  <br>
+ 
+   Loss of Pay :<br>
+  <input type="text" name="loss_of_amount" value="0" required>
+  <br>
+  
+  Advance Amount if any:<br>
+  <input type="text" name="advance_salary" value="0" required>
+  <br>
+  
+  Net Amount Payable :<br>
+  <input type="text" name="net_salary" value="0" required>
+  <br>
+  
+  Status :<br>
+  <select id='status' name='status' required>
+                     <option selected value=''>--SELECT--</option>
+                    
+                     <option>PAID</option>
+                     <option>NOT PAID</option>
+
+	</select>
+	
+<br/>
+<br/>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+</body>
+</html>

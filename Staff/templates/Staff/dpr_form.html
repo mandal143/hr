@@ -1,0 +1,703 @@
+
+{% load static %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DPR</title>
+<meta name="GENERATOR" content="Created by BlueVoda Website builder http://www.bluevoda.com">
+<meta name="HOSTING" content="Hosting Provided By VodaHost http://www.vodahost.com">
+<link rel="icon" href={% static "images/dpr-srl.png" %} type="image/x-icon" />
+
+ <link rel='stylesheet' type='text/css' href={% static  "css/dpr.css" %}>
+
+<style type="text/css">
+div#container
+{
+   width: 503px;
+   position: relative;
+   margin-top: 0px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
+}
+</style>
+<style type="text/css">
+body
+{
+   
+   text-align: center;
+   margin: 0;
+   background-color: #FFFFFF;
+   color: #000000;
+}
+</style>
+<!-- <style type="text/css"> -->
+<!-- a:hover -->
+<!-- { -->
+   <!-- color: #6CDAB1; -->
+<!-- } -->
+<!-- </style> -->
+</head>
+<body>
+<!-- <div id="bv_Image2" style="margin:0;padding:0;position:absolute;top:104px;width:158px;height:204px;margin-left:625px;z-index:0;"> -->
+<!-- <img src={% static "images/manju.jpg" %} id="Image2" alt="" align="top" border="0" style="width:158px;height:204px;"></div> -->
+
+<span  style="margin-left:0px;"><button onclick="goBack()">Go Back</button>
+
+<div id="container">
+
+
+
+<div id="bv_Text1" style="margin:0;padding:0;position:absolute;left:60px;top:13px;width:302px;height:22px;text-align:center;z-index:2;">
+<font style="font-size:19px" color="#FF0000" face="Arial"><b><u>DAILY PROSPECTIVE REPORT</u></b></font></div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+  <form id='DPR' class='sfm_form'  method='post' action="{% url 'Staff:dpr_form_save' id=user.id %}" enctype="multipart/form-data" >
+      {% csrf_token %} 
+	   <div id='DPR_errorloc' class='error_strings' style='width:408px;text-align:left'></div>
+         <div id='DPR_outer_div_p1' class='form_outer_div'>
+            <div style='position:relative' id='DPR_inner_div'>
+               <!-- <input type='hidden' name='sfm_form_submitted' value='yes'> -->
+               <!-- <input type='hidden' name='id_a7613bf4a9fbf5cd3ab6' value='19b90d0b1ce09559a4751e1b9'> -->
+               <!-- <input type='text' name='t9eff1d9628abc666944f' id='t9eff1d9628abc666944f'> -->
+               <div id='label13_container' class='sfm_form_label'>
+                  <label id='label13'>Academic Counselor Details</label>
+               </div>
+               <div id='Image_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Image1_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Image2_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Emp_Code_container' class='sfm_element_container'>
+                  <input type='text' name='Emp_Code' id='Emp_Code' class='sfm_textbox_common sfm_textbox' size='20' value='{{ user }}' readonly>
+               </div>
+               <div id='DPR_Number_container' class='sfm_element_container'>
+                  <input type='text' name='DPR_Number' id='DPR_Number' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='DPR_Month_container' class='sfm_element_container'>
+                  <select name='DPR_Month' id='DPR_Month' size='1'  required>
+                     <option selected value=''>Select</option>
+                     <option>Jan-Feb 19</option>
+                     <option>Feb-Mar 19</option>
+                     <option>Mar-Apr 19</option>
+                     <option>Apr-May 19</option>
+                     <option>May-Jun 19</option>
+                     <option>Jun-Jul 19</option>
+                     <option>Jul-Aug 19</option>
+                     <option>Aug-Sep 19</option>
+                     <option>Sep-Oct 19</option>
+                     <option>Oct-Nov 19</option>
+                     <option>Nov-Dec 19</option>
+                     <option>Dec-Jan 20</option>
+					 <option>Jan-Feb 20</option>
+                     <option>Feb-Mar 20</option>
+                     <option>Mar-Apr 20</option>
+                     <option>Apr-May 20</option>
+                     <option>May-Jun 20</option>
+                     <option>Jun-Jul 20</option>
+                     <option>Jul-Aug 20</option>
+                     <option>Aug-Sep 20</option>
+                     <option>Sep-Oct 20</option>
+                     <option>Oct-Nov 20</option>
+                     <option>Nov-Dec 20</option>
+                     <option>Dec-Jan 21</option>
+					 <option>Jan-Feb 21</option>
+                     <option>Feb-Mar 21</option>
+                     <option>Mar-Apr 21</option>
+                     <option>Apr-May 21</option>
+                     <option>May-Jun 21</option>
+                     <option>Jun-Jul 21</option>
+                     <option>Jul-Aug 21</option>
+                     <option>Aug-Sep 21</option>
+                     <option>Sep-Oct 21</option>
+                     <option>Oct-Nov 21</option>
+                     <option>Nov-Dec 21</option>
+					 
+                     
+                  </select>
+               </div>
+               <div id='label1_container' class='sfm_form_label'>
+                  <label id='label1'>DPR Month</label>
+               </div>
+               <div id='label2_container' class='sfm_form_label'>
+                  <label id='label2'>Emp Code</label>
+               </div>
+               <div id='label_container' class='sfm_form_label'>
+                  <label id='label'>DPR Number</label>
+               </div>
+               <div id='box_element'></div>
+               <div id='Prospective_Name_container' class='sfm_element_container'>
+                  <input type='text' name='Prospective_Name' id='Prospective_Name' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='DOB_Date_container' class='sfm_element_container'>
+                  <select name='DOB_Date' id='DOB_Date' size='1' required>
+                     <option selected value='' >Date</option>
+                     <option value='01' >01</option>
+                     <option value='02' >02</option>
+                     <option value='03' >03</option>
+                     <option value='04' >04</option>
+                     <option value='05' >05</option>
+                     <option value='06' >06</option>
+                     <option value='07' >07</option>
+                     <option value='08' >08</option>
+                     <option value='09' >09</option>
+                     <option value='10' >10</option>
+                     <option value='11' >11</option>
+                     <option value='12' >12</option>
+                     <option value='13' >13</option>
+                     <option value='14' >14</option>
+                     <option value='15' >15</option>
+                     <option value='16' >16</option>
+                     <option value='17' >17</option>
+                     <option value='18' >18</option>
+                     <option value='19' >19</option>
+                     <option value='20' >20</option>
+                     <option value='21' >21</option>
+                     <option value='22' >22</option>
+                     <option value='23' >23</option>
+                     <option value='24' >24</option>
+                     <option value='25' >25</option>
+                     <option value='26' >26</option>
+                     <option value='27' >27</option>
+                     <option value='28' >28</option>
+                     <option value='29' >29</option>
+                     <option value='30' >30</option>
+                     <option value='31' >31</option>
+                  </select>
+               </div>
+               <div id='DOB_Month_container' class='sfm_element_container'>
+                  <select name='DOB_Month' id='DOB_Month' size='1' required>
+                     <option selected value='' >Month</option>
+                     <option value='01' >01</option>
+                     <option value='02' >02</option>
+                     <option value='03' >03</option>
+                     <option value='04' >04</option>
+                     <option value='05' >05</option>
+                     <option value='06' >06</option>
+                     <option value='07' >07</option>
+                     <option value='08' >08</option>
+                     <option value='09' >09</option>
+                     <option value='10' >10</option>
+                     <option value='11' >11</option>
+                     <option value='12' >12</option>
+                  </select>
+               </div>
+               <div id='DOB_Year_container' class='sfm_element_container'>
+                  <select name='DOB_Year' id='DOB_Year' size='1' required>
+                     <option selected value=''>Year</option>
+                     <option value='1947' >1947</option>
+                     <option value='1948' >1948</option>
+                     <option value='1949' >1949</option>
+                     <option value='1950' >1950</option>
+                     <option value='1951' >1951</option>
+                     <option value='1952' >1952</option>
+                     <option value='1953' >1953</option>
+                     <option value='1954' >1954</option>
+                     <option value='1955' >1955</option>
+                     <option value='1956' >1956</option>
+                     <option value='1957' >1957</option>
+                     <option value='1958' >1958</option>
+                     <option value='1959' >1959</option>
+                     <option value='1960' >1960</option>
+                     <option value='1961' >1961</option>
+                     <option value='1962' >1962</option>
+                     <option value='1963' >1963</option>
+                     <option value='1964' >1964</option>
+                     <option value='1965' >1965</option>
+                     <option value='1966' >1966</option>
+                     <option value='1967' >1967</option>
+                     <option value='1968' >1968</option>
+                     <option value='1969' >1969</option>
+                     <option value='1970' >1970</option>
+                     <option value='1971' >1971</option>
+                     <option value='1972' >1972</option>
+                     <option value='1973' >1973</option>
+                     <option value='1974' >1974</option>
+                     <option value='1975' >1975</option>
+                     <option value='1976' >1976</option>
+                     <option value='1977' >1977</option>
+                     <option value='1978' >1978</option>
+                     <option value='1979' >1979</option>
+                     <option value='1980' >1980</option>
+                     <option value='1981' >1981</option>
+                     <option value='1982' >1982</option>
+                     <option value='1983' >1983</option>
+                     <option value='1984' >1984</option>
+                     <option value='1985' >1985</option>
+                     <option value='1986' >1986</option>
+                     <option value='1987' >1987</option>
+                     <option value='1988' >1988</option>
+                     <option value='1989' >1989</option>
+                     <option value='1990' >1990</option>
+                     <option value='1991' >1991</option>
+                     <option value='1992' >1992</option>
+                     <option value='1993' >1993</option>
+                     <option value='1994' >1994</option>
+                     <option value='1995' >1995</option>
+                     <option value='1996' >1996</option>
+                     <option value='1997' >1997</option>
+                     <option value='1998' >1998</option>
+                     <option value='1999' >1999</option>
+                     <option value='2000' >2000</option>
+                     <option value='2001' >2001</option>
+                     <option value='2002' >2002</option>
+                     <option value='2003' >2003</option>
+                     <option value='2004' >2004</option>
+                     <option value='2005' >2005</option>
+                     <option value='2006' >2006</option>
+                     <option value='2007' >2007</option>
+                     <option value='2008' >2008</option>
+                     <option value='2009' >2009</option>
+                     <option value='2010' >2010</option>
+                     <option value='2011' >2011</option>
+                     <option value='2012' >2012</option>
+                     <option value='2013' >2013</option>
+                     <option value='2014' >2014</option>
+                     <option value='2015' >2015</option>
+                     <option value='2016' >2016</option>
+                     <option value='2017' >2017</option>
+                     <option value='2018' >2018</option>
+                     <option value='2019' >2019</option>
+                  </select>
+               </div>
+               <div id='label14_container' class='sfm_form_label'>
+                  <label id='label14'>Prospective Personal Details</label>
+               </div>
+               <div id='Enquiry_By_container' class='sfm_element_container'>
+                  <input type='text' name='Enquiry_By' id='Enquiry_By' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Image5_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Image3_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label12_container' class='sfm_form_label'>
+                  <label id='label12'>Prospective DOB</label>
+               </div>
+               <div id='label3_container' class='sfm_form_label'>
+                  <label id='label3'>Prospective Name</label>
+               </div>
+               <div id='Image9_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label27_container' class='sfm_form_label'>
+                  <label id='label27' for='Relationship'>Relationship</label>
+               </div>
+               <div id='Relationship_container' class='sfm_element_container'>
+                  <select name='Relationship' id='Relationship' size='1' required>
+                     <option selected value='' >Select</option>
+                     <option value='Self' >Self</option>
+                     <option value='Father' >Father</option>
+                     <option value='Mother' >Mother</option>
+                     <option value='Uncle' >Uncle</option>
+                     <option value='Aunty' >Aunty</option>
+                     <option value='Sister' >Sister</option>
+                     <option value='Brother' >Brother</option>
+                     <option value='Cousin' >Cousin</option>
+                     <option value='Friend' >Friend</option>
+                     <option value='Family Friend' >Family Friend</option>
+                     <option value='Grand Parents' >Grand Parents</option>
+                     <option value='Other' >Other</option>
+                  </select>
+               </div>
+               <div id='Image4_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Phone1_container' class='sfm_element_container'>
+                  <input type='text' name='Phone1' id='Phone1' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Phone2_container' class='sfm_element_container'>
+                  <input type='text' name='Phone2' id='Phone2' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='Prospective_Domicile_State_container' class='sfm_element_container'>
+                  <select name='Prospective_Domicile_State' id='Prospective_Domicile_State' size='1' required>
+                     <option selected value='' >Select</option>
+                     <option value='AN' >AN</option>
+                     <option value='AP' >AP</option>
+                     <option value='AR' >AR</option>
+                     <option value='AS' >AS</option>
+                     <option value='BH' >BH</option>
+                     <option value='CH' >CH</option>
+                     <option value='CG' >CG</option>
+                     <option value='DN' >DN</option>
+                     <option value='DD' >DD</option>
+                     <option value='GA' >GA</option>
+                     <option value='GJ' >GJ</option>
+                     <option value='HR' >HR</option>
+                     <option value='HP' >HP</option>
+                     <option value='JK' >JK</option>
+                     <option value='JH' >JH</option>
+                     <option value='KA' >KA</option>
+                     <option value='KL' >KL</option>
+                     <option value='LK' >LK</option>
+                     <option value='MP' >MP</option>
+                     <option value='MH' >MH</option>
+                     <option value='MN' >MN</option>
+                     <option value='MG' >MG</option>
+                     <option value='MZ' >MZ</option>
+                     <option value='NG' >NG</option>
+                     <option value='OD' >OD</option>
+                     <option value='PB' >PB</option>
+                     <option value='RJ' >RJ</option>
+                     <option value='SK' >SK</option>
+                     <option value='TN' >TN</option>
+                     <option value='TL' >TL</option>
+                     <option value='DL' >DL</option>
+                     <option value='TR' >TR</option>
+                     <option value='UK' >UK</option>
+                     <option value='UP' >UP</option>
+                     <option value='WB' >WB</option>
+                  </select>
+               </div>
+               <div id='Prospective_City_container' class='sfm_element_container'>
+                  <input type='text' name='Prospective_City' id='Prospective_City' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='label6_container' class='sfm_form_label'>
+                  <label id='label6'>Enquiry By</label>
+               </div>
+               <div id='Interested_Course_container' class='sfm_element_container'>
+                  <select name='Interested_Course' id='Interested_Course' size='1' required>
+                     <option selected value='' >Select</option>
+                     <option value='Medical' >Medical</option>
+                     <option value='Dental' >Dental</option>
+                     <option value='Nursing' >Nursing</option>
+                     <option value='Engineering' >Engineering</option>
+                     <option value='Management' >Management</option>
+                     <option value='Others' >Others</option>
+                  </select>
+               </div>
+               <div id='Interested_Course_Others_container' class='sfm_element_container'>
+                  <input type='text' name='Interested_Course_Others' id='Interested_Course_Others' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='Image6_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label8_container' class='sfm_form_label'>
+                  <label id='label8'>Prospective Phone Number 1</label>
+               </div>
+               <div id='label11_container' class='sfm_form_label'>
+                  <label id='label11'>Prospective Phone Number 2</label>
+               </div>
+               <div id='Image8_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Image7_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label16_container' class='sfm_form_label'>
+                  <label id='label16'>Present City</label>
+               </div>
+               <div id='label5_container' class='sfm_form_label'>
+                  <label id='label5'>Prospective Domicile State</label>
+               </div>
+               <div id='label19_container' class='sfm_form_label'>
+                  <label id='label19' for='Interested_State1'>Interested States</label>
+               </div>
+               <div id='Interested_State1_container' class='sfm_element_container'>
+                  <select name='Interested_State1' id='Interested_State1' size='1' required>
+                     <option selected value='' >Select</option>
+                     <option value='AN' >AN</option>
+                     <option value='AP' >AP</option>
+                     <option value='AR' >AR</option>
+                     <option value='AS' >AS</option>
+                     <option value='BH' >BH</option>
+                     <option value='CH' >CH</option>
+                     <option value='CG' >CG</option>
+                     <option value='DN' >DN</option>
+                     <option value='DD' >DD</option>
+                     <option value='GA' >GA</option>
+                     <option value='GJ' >GJ</option>
+                     <option value='HR' >HR</option>
+                     <option value='HP' >HP</option>
+                     <option value='JK' >JK</option>
+                     <option value='JH' >JH</option>
+                     <option value='KA' >KA</option>
+                     <option value='KL' >KL</option>
+                     <option value='LK' >LK</option>
+                     <option value='MP' >MP</option>
+                     <option value='MH' >MH</option>
+                     <option value='MN' >MN</option>
+                     <option value='MG' >MG</option>
+                     <option value='MZ' >MZ</option>
+                     <option value='NG' >NG</option>
+                     <option value='OD' >OD</option>
+                     <option value='PB' >PB</option>
+                     <option value='RJ' >RJ</option>
+                     <option value='SK' >SK</option>
+                     <option value='TN' >TN</option>
+                     <option value='TL' >TL</option>
+                     <option value='DL' >DL</option>
+                     <option value='TR' >TR</option>
+                     <option value='UK' >UK</option>
+                     <option value='UP' >UP</option>
+                     <option value='WB' >WB</option>
+                  </select>
+               </div>
+               <div id='Interested_State2_container' class='sfm_element_container'>
+                  <select name='Interested_State2' id='Interested_State2' size='1' >
+                     <option selected value='' >Select</option>
+                     <option value='AN' >AN</option>
+                     <option value='AP' >AP</option>
+                     <option value='AR' >AR</option>
+                     <option value='AS' >AS</option>
+                     <option value='BH' >BH</option>
+                     <option value='CH' >CH</option>
+                     <option value='CG' >CG</option>
+                     <option value='DN' >DN</option>
+                     <option value='DD' >DD</option>
+                     <option value='GA' >GA</option>
+                     <option value='GJ' >GJ</option>
+                     <option value='HR' >HR</option>
+                     <option value='HP' >HP</option>
+                     <option value='JK' >JK</option>
+                     <option value='JH' >JH</option>
+                     <option value='KA' >KA</option>
+                     <option value='KL' >KL</option>
+                     <option value='LK' >LK</option>
+                     <option value='MP' >MP</option>
+                     <option value='MH' >MH</option>
+                     <option value='MN' >MN</option>
+                     <option value='MG' >MG</option>
+                     <option value='MZ' >MZ</option>
+                     <option value='NG' >NG</option>
+                     <option value='OD' >OD</option>
+                     <option value='PB' >PB</option>
+                     <option value='RJ' >RJ</option>
+                     <option value='SK' >SK</option>
+                     <option value='TN' >TN</option>
+                     <option value='TL' >TL</option>
+                     <option value='DL' >DL</option>
+                     <option value='TR' >TR</option>
+                     <option value='UK' >UK</option>
+                     <option value='UP' >UP</option>
+                     <option value='WB' >WB</option>
+                  </select>
+               </div>
+               <div id='Interested_State3_container' class='sfm_element_container'>
+                  <select name='Interested_State3' id='Interested_State3' size='1' >
+                     <option selected value='' >Select</option>
+                     <option value='AN' >AN</option>
+                     <option value='AP' >AP</option>
+                     <option value='AR' >AR</option>
+                     <option value='AS' >AS</option>
+                     <option value='BH' >BH</option>
+                     <option value='CH' >CH</option>
+                     <option value='CG' >CG</option>
+                     <option value='DN' >DN</option>
+                     <option value='DD' >DD</option>
+                     <option value='GA' >GA</option>
+                     <option value='GJ' >GJ</option>
+                     <option value='HR' >HR</option>
+                     <option value='HP' >HP</option>
+                     <option value='JK' >JK</option>
+                     <option value='JH' >JH</option>
+                     <option value='KA' >KA</option>
+                     <option value='KL' >KL</option>
+                     <option value='LK' >LK</option>
+                     <option value='MP' >MP</option>
+                     <option value='MH' >MH</option>
+                     <option value='MN' >MN</option>
+                     <option value='MG' >MG</option>
+                     <option value='MZ' >MZ</option>
+                     <option value='NG' >NG</option>
+                     <option value='OD' >OD</option>
+                     <option value='PB' >PB</option>
+                     <option value='RJ' >RJ</option>
+                     <option value='SK' >SK</option>
+                     <option value='TN' >TN</option>
+                     <option value='TL' >TL</option>
+                     <option value='DL' >DL</option>
+                     <option value='TR' >TR</option>
+                     <option value='UK' >UK</option>
+                     <option value='UP' >UP</option>
+                     <option value='WB' >WB</option>
+                  </select>
+               </div>
+               <div id='box_element1'></div>
+               <div id='label15_container' class='sfm_form_label'>
+                  <label id='label15'>Prospective Academic Details</label>
+               </div>
+               <div id='Image10_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label18_container' class='sfm_form_label'>
+                  <label id='label18'>Others (if not in list) </label>
+               </div>
+               <div id='label4_container' class='sfm_form_label'>
+                  <label id='label4'>Course Interested in</label>
+               </div>
+               <div id='Image11_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label20_container' class='sfm_form_label'>
+                  <label id='label20' for='Percentage_10'>10th %</label>
+               </div>
+               <div id='Percentage_10_container' class='sfm_element_container'>
+                  <input type='text' name='Percentage_10' id='Percentage_10' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Image12_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='Image13_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label21_container' class='sfm_form_label'>
+                  <label id='label21' for='Percentage_12'>12th %</label>
+               </div>
+               <div id='Percentage_12_container' class='sfm_element_container'>
+                  <input type='text' name='Percentage_12' id='Percentage_12' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='label22_container' class='sfm_form_label'>
+                  <label id='label22' for='Core_Subject1'>Core Subjects</label>
+               </div>
+               <div id='Core_Subject1_container' class='sfm_element_container'>
+                  <input type='text' name='Core_Subject1' id='Core_Subject1' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Core_Subject2_container' class='sfm_element_container'>
+                  <input type='text' name='Core_Subject2' id='Core_Subject2' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Core_Subject3_container' class='sfm_element_container'>
+                  <input type='text' name='Core_Subject3' id='Core_Subject3' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Image14_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label24_container' class='sfm_form_label'>
+                  <label id='label24' for='Enterance_Exam1'>Enterance Exam Appeared </label>
+               </div>
+               <div id='Enterance_Exam1_container' class='sfm_element_container'>
+                  <input type='text' name='Enterance_Exam1' id='Enterance_Exam1' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Enterance_Exam2_container' class='sfm_element_container'>
+                  <input type='text' name='Enterance_Exam2' id='Enterance_Exam2' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='Enterance_Exam3_container' class='sfm_element_container'>
+                  <input type='text' name='Enterance_Exam3' id='Enterance_Exam3' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='Enterance_Exam4_container' class='sfm_element_container'>
+                  <input type='text' name='Enterance_Exam4' id='Enterance_Exam4' class='sfm_textbox_common sfm_textbox' size='20' value='' >
+               </div>
+               <div id='box_element2'></div>
+               <div id='label23_container' class='sfm_form_label'>
+                  <label id='label23'>Academic Counselor Remarks</label>
+               </div>
+               <div id='Image15_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label17_container' class='sfm_form_label'>
+                  <label id='label17' for='Prospective_Budget'>Prospective Budget</label>
+               </div>
+               <div id='Prospective_Budget_container' class='sfm_element_container'>
+                  <input type='text' name='Prospective_Budget' id='Prospective_Budget' class='sfm_textbox_common sfm_textbox' size='20' value='' required>
+               </div>
+               <div id='Image16_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label26_container' class='sfm_form_label'>
+                  <label id='label26' for='Reg_by_Date'>Prospective will register by</label>
+               </div>
+               <div id='Reg_by_Date_container' class='sfm_element_container'>
+                  <select name='Reg_by_Date' id='Reg_by_Date' size='1' required>
+                     <option selected value='' >Date</option>
+                     <option value='01' >01</option>
+                     <option value='02' >02</option>
+                     <option value='03' >03</option>
+                     <option value='04' >04</option>
+                     <option value='05' >05</option>
+                     <option value='06' >06</option>
+                     <option value='07' >07</option>
+                     <option value='08' >08</option>
+                     <option value='09' >09</option>
+                     <option value='10' >10</option>
+                     <option value='11' >11</option>
+                     <option value='12' >12</option>
+                     <option value='13' >13</option>
+                     <option value='14' >14</option>
+                     <option value='15' >15</option>
+                     <option value='16' >16</option>
+                     <option value='17' >17</option>
+                     <option value='18' >18</option>
+                     <option value='19' >19</option>
+                     <option value='20' >20</option>
+                     <option value='21' >21</option>
+                     <option value='22' >22</option>
+                     <option value='23' >23</option>
+                     <option value='24' >24</option>
+                     <option value='25' >25</option>
+                     <option value='26' >26</option>
+                     <option value='27' >27</option>
+                     <option value='28' >28</option>
+                     <option value='29' >29</option>
+                     <option value='30' >30</option>
+                     <option value='31' >31</option>
+                  </select>
+               </div>
+               <div id='Reg_By_Month_container' class='sfm_element_container'>
+                  <select name='Reg_By_Month' id='Reg_By_Month' size='1' required>
+                     <option selected value='' >Month</option>
+                     <option value='01' >01</option>
+                     <option value='02' >02</option>
+                     <option value='03' >03</option>
+                     <option value='04' >04</option>
+                     <option value='05' >05</option>
+                     <option value='06' >06</option>
+                     <option value='07' >07</option>
+                     <option value='08' >08</option>
+                     <option value='09' >09</option>
+                     <option value='10' >10</option>
+                     <option value='11' >11</option>
+                     <option value='12' >12</option>
+                  </select>
+               </div>
+               <div id='Reg_By_Year_container' class='sfm_element_container'>
+                  <select name='Reg_By_Year' id='Reg_By_Year' size='1' required>
+                     <option selected value='' >Year</option>
+                     <option value='2019' >2019</option>
+                     <option value='2020' >2020</option>
+                     <option value='2021' >2021</option>
+                     <option value='2022' >2022</option>
+                     <option value='2023' >2023</option>
+                     <option value='2024' >2024</option>
+                     <option value='2020' >2025</option>
+                  </select>
+               </div>
+               <div id='Image17_container'>
+                  <img class='sfm_image_in_form' src={% static "images/red_star_PNG55.png" %} width='12' height='12' alt>
+               </div>
+               <div id='label25_container' class='sfm_form_label'>
+                  <label id='label25' for='Remarks'>Remarks</label>
+               </div>
+               <div id='Remarks_container' class='sfm_element_container'>
+			   <textarea name='Remarks' id='Remarks' class='sfm_textbox_common sfm_textarea' required></textarea></div>
+               <div id='Submit_container' class='loading_div sfm_element_container'>
+                  <input type='submit' name='Submit' tabindex='33' id='DPR_Submit_img'  alt='submit' style="background-color:red" value="SUBMIT">
+               </div>
+               <div id='box_element3'></div>
+            </div>
+         </div>
+<!-- <div class='sfm_cr_box' style='padding:3px; width:350px;cursor:default'>Form powered by: easy form creator software <a style='text-decoration:none;' href='http://simfatic.com/form-software/html-contact-form-generator.html'>Simfatic Forms</a></div> -->
+      </form>
+
+
+
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+</body>
+</html>

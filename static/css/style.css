@@ -1,0 +1,476 @@
+#Course_Table .sfm_textbox
+{
+    padding:1px;
+}
+#Course_Table .sfm_textarea
+{
+    padding:2px;
+    resize:none;
+}
+#Course_Table .error_strings
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#660000;
+}
+#Course_Table img
+{
+    border:0;
+}
+#Course_Table .loading_div
+{
+    background-color:transparent;
+    background-image:url("images/loading.gif");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#Course_Table input[type='submit'],input[type='reset']
+{
+    font:inherit;
+    color:inherit;
+}
+#Course_Table .sfm_cr_box
+{
+    font-family:Verdana;
+    font-size:10px;
+    color:#888888;
+}
+#Course_Table .sfm_cr_box a
+{
+    color:#888888;
+}
+#Course_Table .form_outer_div
+{
+    border:none;
+    background-color:#ffffff;
+}
+#Course_Table .sfm_form_label
+{
+    background-color:transparent;
+}
+#Course_Table .element_label
+{
+    background-color:transparent;
+}
+body#sfm_Course_Table_body
+{
+    background-color:transparent;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    margin:0px;
+}
+#Course_Table .form_outer_div
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+}
+#Course_Table .form_subheading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#Course_Table .sfm_float_error_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+    background:none repeat scroll 0 0 #333333;
+    border:0;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:0 0 4px #333;
+    border:none;
+}
+#Course_Table .sfm_close_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+}
+#Course_Table .progress_box_container
+{
+    border:1px solid #8e8e8e;
+    background-color:#cccccc;
+    font-family:Arial;
+    font-size:10px;
+    color:#ffffff;
+    text-align:center;
+    vertical-align:middle;
+}
+#Course_Table .progress_box
+{
+    background-color:#333333;
+    width:2px;
+    float:left;
+    margin:2px;
+}
+#Course_Table .page_heading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#Course_Table .page_number
+{
+    background-color:transparent;
+}
+
+
+#Course_Table #label8
+{
+    font-family:Arial;
+    font-size:24px;
+    color:#000000;
+    font-weight:bold;
+}
+
+#Course_Table #t15427502bc6d0bbf41ab
+{
+    width:5px;
+    height:5px;
+    display:none;
+}
+#Course_Table #label8_container
+{
+    position:absolute;
+    left:85px;
+    top:28px;
+    width:375px;
+    height:20px;
+    z-index:23;
+}
+#Course_Table #label8
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #Image1_container
+{
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:51px;
+    height:68px;
+    z-index:21;
+}
+#Course_Table #box_element
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:530px;
+    height:78px;
+    z-index:1;
+    border:1px solid #000000;
+    background-color:#00ff00;
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+#Course_Table #label_container
+{
+    position:absolute;
+    left:8px;
+    top:84px;
+    width:97px;
+    height:20px;
+    z-index:5;
+}
+#Course_Table #label
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label1_container
+{
+    position:absolute;
+    left:113px;
+    top:84px;
+    width:97px;
+    height:20px;
+    z-index:7;
+}
+#Course_Table #label1
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label2_container
+{
+    position:absolute;
+    left:218px;
+    top:84px;
+    width:144px;
+    height:20px;
+    z-index:10;
+}
+#Course_Table #label2
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label3_container
+{
+    position:absolute;
+    left:370px;
+    top:84px;
+    width:152px;
+    height:20px;
+    z-index:12;
+}
+#Course_Table #label3
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #box_element1
+{
+    position:absolute;
+    left:0px;
+    top:78px;
+    width:530px;
+    height:60px;
+    z-index:2;
+    border:1px solid #000000;
+    background-color:#ff6820;
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+#Course_Table #label4_container
+{
+    position:absolute;
+    left:8px;
+    top:144px;
+    width:177px;
+    height:20px;
+    z-index:14;
+}
+#Course_Table #label4
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label5_container
+{
+    position:absolute;
+    left:193px;
+    top:144px;
+    width:121px;
+    height:20px;
+    z-index:16;
+}
+#Course_Table #label5
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label6_container
+{
+    position:absolute;
+    left:322px;
+    top:144px;
+    width:71px;
+    height:20px;
+    z-index:17;
+}
+#Course_Table #label6
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #label7_container
+{
+    position:absolute;
+    left:402px;
+    top:144px;
+    width:121px;
+    height:20px;
+    z-index:19;
+}
+#Course_Table #label7
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#Course_Table #box_element2
+{
+    position:absolute;
+    left:0px;
+    top:138px;
+    width:530px;
+    height:60px;
+    z-index:3;
+    border:1px solid #000000;
+    background-color:#ff6820;
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+#Course_Table #box_element3
+{
+    position:absolute;
+    left:0px;
+    top:198px;
+    width:530px;
+    height:62px;
+    z-index:4;
+    border:1px solid #000000;
+    background-color:#c0ffff;
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+#Course_Table #Counter_Number_container
+{
+    position:absolute;
+    left:8px;
+    top:103px;
+    z-index:6;
+}
+#Course_Table #Counter_Number
+{
+    float:left;
+    width:90px;
+    z-index:6;
+    text-align:right;
+}
+#Course_Table #Course_Code_container
+{
+    position:absolute;
+    left:113px;
+    top:103px;
+    z-index:8;
+}
+#Course_Table #Course_Code
+{
+    float:left;
+    width:90px;
+    z-index:8;
+    text-align:right;
+}
+#Course_Table #Course_Name_container
+{
+    position:absolute;
+    left:218px;
+    top:103px;
+    z-index:9;
+}
+#Course_Table #Course_Name
+{
+    float:left;
+    width:137px;
+    z-index:9;
+}
+#Course_Table #Course_Specialization_container
+{
+    position:absolute;
+    left:370px;
+    top:103px;
+    z-index:11;
+}
+#Course_Table #Course_Specialization
+{
+    float:left;
+    width:146px;
+    z-index:11;
+}
+#Course_Table #Institute_Name_container
+{
+    position:absolute;
+    left:8px;
+    top:163px;
+    z-index:13;
+}
+#Course_Table #Institute_Name
+{
+    float:left;
+    width:170px;
+    z-index:13;
+}
+#Course_Table #Location_container
+{
+    position:absolute;
+    left:193px;
+    top:163px;
+    z-index:15;
+}
+#Course_Table #Location
+{
+    float:left;
+    width:114px;
+    z-index:15;
+}
+#Course_Table #Reg_Amount_container
+{
+    position:absolute;
+    left:322px;
+    top:163px;
+    z-index:20;
+}
+#Course_Table #Reg_Amount
+{
+    float:left;
+    width:67px;
+    z-index:20;
+    text-align:right;
+}
+#Course_Table #Service_Charges_container
+{
+    position:absolute;
+    left:402px;
+    top:163px;
+    z-index:18;
+}
+#Course_Table #Service_Charges
+{
+    float:left;
+    width:114px;
+    z-index:18;
+}
+#Course_Table #Submit_container
+{
+    position:absolute;
+    left:162px;
+    top:195px;
+    width:202px;
+    height:65px;
+    z-index:22;
+}
+#Course_Table #Course_Table_Submit_img
+{
+    width:202px;
+    height:65px;
+    border:none;
+}

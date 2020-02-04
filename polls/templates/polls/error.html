@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<meta charset="UTF-8">
+<title>HR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href={% static "css/w3.css" %}>
+<link rel="stylesheet" href={% static "fonts/Raleway/Raleway-Regular.ttf" %}>
+<link rel="stylesheet" href={% static "font-awesome-4.7.0/css/font-awesome.min.css" %}>
+<head>
+<style>
+body {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/hr.jpg');
+            background-size:auto auto;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+#entry {
+    
+	 
+
+    height: 650px;
+     padding: 100px 0 0 0; 
+     
+     
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 15px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 70%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 30%; /* Could be more or less, depending on screen size */
+
+        }
+    
+   @media screen and (max-width: 1000px) {
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 60%; /* Could be more or less, depending on screen size */
+
+        }
+    }
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+
+<div  class="modal-content animate" style="text-align:center;">
+    
+
+	<span style="color:blue;font-size:30px;"><b>Hey: {{ user.first_name }} {{ user.last_name }}</b></span>
+	
+	{% if error_message %}
+	   <p style="color:red;font-size:20px;"><strong><b>{{ error_message }}</b></strong></p>   
+    {% endif %}
+	
+	{% if user_previous_time %}
+	   <p style="color:red;font-size:20px;"><strong><b>{{ user_previous_time }}</b></strong></p>
+	   <p style="color:red;"><strong> Do you want to LOGOUT? </strong></p>
+	   <p style="color:red;"><strong> Or </strong></p>
+	   <p style="color:red;"><strong> Close the window in case you do not wish to LOGOUT. </strong></p>
+       <button id="logoutBtn" name="logoutBtn" class="w3-button w3-green" ><a href="{% url 'polls:Logout' id=user.id %}" id="logout"><b>Logout</b></a></button>
+       <a href="{% url 'polls:masterdashboard' id=user.id %}"><button id="logoutBtn" name="logoutBtn" class="w3-button w3-green"><b>Home Page</b></button></a>
+       <!-- <button id="logoutBtn" name="logoutBtn" class="w3-button w3-green"><a href="{% url 'polls:change_password' id=user.id %}"><b>Change Password</b></a></button> -->
+       <a href="{% url 'polls:index'  %}"><button id="logoutBtn" name="logoutBtn" class="w3-button w3-green"><b>Close</b></button></a>
+    {% endif %}
+		
+	
+</div>
+
+<div id="entry">
+<a href="{% url 'polls:index' %}" style="margin-left: 200px" class="w3-button w3-blue w3-padding"><i class="fa fa-users fa-fw"></i>  Log In!!</a>
+</div>
+
+
+
+
+<footer class="w3-container">
+  </br>
+    <h4><a href="#">hr</a></h4>
+</footer>
+
+<script>
+$(function(){
+    $('a#logout').click(function(){ 
+	    alert("hii");
+        if(confirm('Are you sure you want to logout')) {
+            return true;
+        }
+
+        return false;
+    });
+});
+</script>
+
+
+
+</body>
+
+</html>
+

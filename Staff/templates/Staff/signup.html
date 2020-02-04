@@ -1,0 +1,26 @@
+ 
+ 
+<style>
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<span class="w3-bar-item w3-left"><button onclick="goBack()">Go Back</button></span>
+<h2>username: {{ user }} </h2>
+ <h2>Sign up</h2>
+ {{ error }}
+<div class="container">
+  <form action="{% url 'Administration:signup' id=user.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+ 
+</div> 
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

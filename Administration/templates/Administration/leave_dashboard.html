@@ -1,0 +1,196 @@
+<html>
+{% load static %}
+
+<title></title>
+
+<script src={% static "js/form_validations_marketing.js" %}></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href={% static "css/jquery.dataTables.min.css" %}>
+<link rel="stylesheet" href={% static "css/w3.css" %}>
+<link rel="stylesheet" href={% static "fonts/Raleway/Raleway-Regular.ttf" %}>
+<link href={% static "font-awesome-4.7.0/css/font-awesome.min.css" %} rel="stylesheet">
+<link rel="stylesheet" href={% static "css/jquery-confirm.min.css" %}>
+<link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
+<script src={% static "js/jquery.min.js" %}></script>
+<script src={% static "js/jquery.min.1.7.1.js" %}></script>
+<script type="text/javascript" src={% static "js/jquery.dataTables.min.js" %} ></script>
+<script type="text/javascript" src={% static "js/bootstrap.min.js" %} ></script>
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 1%;
+}
+table {
+    border-spacing: 15px;
+}
+
+/* The Modal (background) */
+
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 82%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+</style>
+
+
+<body class="w3-light-grey">
+
+
+
+<script>
+$(document).ready(function(){
+    
+    $('#enquiryTable').dataTable({
+  aaSorting: [[1, 'dsc']]
+});
+
+});
+</script>
+
+
+<div class="w3-bar w3-top w3-khaki w3-large" style="z-index:4">
+ 
+  <a href="{% url 'Administration:home_page' id=user.id %}"><button id="homepage" name="homepage" class="w3-button w3-red"><b>Home Page</b></button></a> 
+
+  <span class="w3-bar-item w3-left"><b>Welcome: {{ user.username }} </b></a></span>
+    
+  <!-- <span class="w3-bar-item w3-right"><a href={% url 'polls:export_users_csv'  %}><b>Download Report</b></a></span> -->
+  <!-- <span class="w3-bar-item w3-right"><button id="logoutBtn" name="logoutBtn" class="w3-button w3-red"><a href="{% url 'polls:Logout' id=user.id %}"><b>Logout</b></a></button></span> -->
+ 
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+<div class="w3-container w3-responsive">
+
+{% if leave_lists %}
+<table class="table table-striped" id="enquiryTable">
+<thead>
+<tr>
+  <th>Employee Name</th>
+  <th>Date Applied</th>
+  <th>No of Days</th>
+  <th>From Date</th>
+  <th>To Date</th>
+  <th>Leave Reason</th>
+  <th>Status</th>
+  
+ 
+</tr>
+</thead>
+<tbody>
+{% for details in leave_lists %}
+<tr>
+    
+    <td>{{ details.user.get_full_name }}</td>
+    <td>{{ details.leave_dated }}</td>
+    <td>{{ details.leave_no_of_days }}</td>
+    <td>{{ details.leave_from_date }}</td>
+    <td>{{ details.leave_to_date }}</td>
+    <td><button type="button" class="w3-button w3-teal"  onclick="updateCostModal(leave_reason='{{ details.leave_reason }}');">View Details</button></td>
+    {% if details.leave_status == 'Approval Pending' %}
+	<td><a href="{% url 'Administration:leave_accept' leaves_id=details.leaves_id  id=details.user.id %}"><button type="button" class="w3-button w3-green">Accept</button></a>
+	    <a href="{% url 'Administration:leave_reject' leaves_id=details.leaves_id  id=details.user.id %}"><button type="button" class="w3-button w3-red">Reject</button></a></td>
+	{% else %}
+	<td>{{ details.leave_status }}</td>
+	{% endif %}
+       
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+{% else %}
+  <p>No Leave details are available</p>
+{% endif %}	
+
+</div>
+
+<div id="updateCostModal" name="updateCostModal" class="modal" style="margin-left:120px;">
+
+<!-- Modal content -->
+ <div class="modal-content animate" id="updateCostModalContent" name="updateCostModalContent" >
+  <span onclick="document.getElementById('updateCostModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!------------------------------------------------------------------------------ -->
+
+  
+<form role="form" method="post" id="update_kit_form_id" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" action="#" enctype="multipart/form-data"  >
+        {% csrf_token %}
+<!-- <form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin"> -->
+<h1 class="w3-center">Reason Details</h1>
+
+<div class="w3-row-padding w3-section">
+
+    <div class="w3-col" style="width:100%">
+	  <label for="leave_reason"> Details :: </label>
+      <b><textarea id="leave_reason" name="leave_reason" class="w3-input w3-border w3-grey" value="" type="text"   readonly=""></textarea></b>
+    </div>
+
+</div>
+
+
+
+</div>
+</div>
+
+</form>
+
+</div>
+    
+</div>
+
+
+
+
+
+
+
+<script>
+
+function updateCostModal(leave_reason) {
+               
+    document.getElementById('updateCostModal').style.display='block';
+    document.getElementById('leave_reason').value = leave_reason;
+    
+
+    
+}
+
+</script>
+
+
+
+
+</body>
+

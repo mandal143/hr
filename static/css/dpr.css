@@ -1,0 +1,1701 @@
+#DPR .sfm_textbox
+{
+    padding:1px;
+}
+#DPR .sfm_textarea
+{
+    padding:2px;
+    resize:none;
+}
+#DPR .error_strings
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#660000;
+}
+#DPR img
+{
+    border:0;
+}
+#DPR .loading_div
+{
+    background-color:transparent;
+    background-image:url("images/loading.gif");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#DPR input[type='submit'],input[type='reset']
+{
+    font:inherit;
+    color:inherit;
+}
+#DPR .sfm_cr_box
+{
+    font-family:Verdana;
+    font-size:10px;
+    color:#888888;
+}
+#DPR .sfm_cr_box a
+{
+    color:#888888;
+}
+#DPR .sfm_slider
+{
+    margin:0;
+    display:inline-bock;
+}
+#DPR .slider_label
+{
+    padding-top:5px;
+    padding-left:3px;
+    overflow:visible;
+    display:inline-block;
+}
+#DPR .form_outer_div
+{
+    border:none;
+    background-color:#ffffff;
+}
+#DPR .sfm_form_label
+{
+    background-color:transparent;
+}
+#DPR .element_label
+{
+    background-color:transparent;
+}
+body#sfm_DPR_body
+{
+    background-color:transparent;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    margin:0px;
+}
+#DPR .form_outer_div
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+}
+#DPR .form_subheading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#DPR .sfm_float_error_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+    background:none repeat scroll 0 0 #333333;
+    border:0;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:0 0 4px #333;
+    border:none;
+}
+#DPR .sfm_close_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+}
+#DPR .progress_box_container
+{
+    border:1px solid #8e8e8e;
+    background-color:#cccccc;
+    font-family:Arial;
+    font-size:10px;
+    color:#ffffff;
+    text-align:center;
+    vertical-align:middle;
+}
+#DPR .progress_box
+{
+    background-color:#333333;
+    width:2px;
+    float:left;
+    margin:2px;
+}
+#DPR .page_heading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#DPR .page_number
+{
+    background-color:transparent;
+}
+#DPR input[type='text'],input[type='password'],input[type='email'],input[type='tel'],input[type='number']
+{
+    background-color:#ffffff;
+    border:1px solid #888888;
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    height:23px;
+    line-height:23px;
+}
+#DPR textarea
+{
+    background-color:#ffffff;
+    border:1px solid #888888;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+
+#DPR #label13
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+#DPR #label14
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+#DPR #label15
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+#DPR #label23
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+#DPR #t9eff1d9628abc666944f
+{
+    width:5px;
+    height:5px;
+    display:none;
+}
+#DPR #label13_container
+{
+    z-index:19;
+}
+#DPR #Image_container
+{
+    z-index:53;
+}
+#DPR #Image1_container
+{
+    z-index:54;
+}
+#DPR #Image2_container
+{
+    z-index:55;
+}
+#DPR #Emp_Code_container
+{
+    z-index:15;
+}
+#DPR #Emp_Code
+{
+    float:left;
+    z-index:15;
+}
+#DPR #DPR_Number_container
+{
+    z-index:16;
+}
+#DPR #DPR_Number
+{
+    float:left;
+    z-index:16;
+}
+#DPR #DPR_Month_container
+{
+    z-index:18;
+}
+#DPR #DPR_Month
+{
+    float:left;
+    z-index:18;
+}
+#DPR #label1_container
+{
+    z-index:6;
+}
+#DPR #label2_container
+{
+    z-index:7;
+}
+#DPR #label_container
+{
+    z-index:5;
+}
+#DPR #box_element
+{
+    z-index:3;
+    border:none;
+    background-color:#00ff00;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+#DPR #Prospective_Name_container
+{
+    z-index:17;
+}
+#DPR #Prospective_Name
+{
+    float:left;
+    z-index:17;
+}
+#DPR #DOB_Date_container
+{
+    z-index:21;
+}
+#DPR #DOB_Date
+{
+    float:left;
+    z-index:21;
+}
+#DPR #DOB_Month_container
+{
+    z-index:22;
+}
+#DPR #DOB_Month
+{
+    float:left;
+    z-index:22;
+}
+#DPR #DOB_Year_container
+{
+    z-index:23;
+}
+#DPR #DOB_Year
+{
+    float:left;
+    z-index:23;
+}
+#DPR #label14_container
+{
+    z-index:20;
+}
+#DPR #Enquiry_By_container
+{
+    z-index:24;
+}
+#DPR #Enquiry_By
+{
+    float:left;
+    z-index:24;
+}
+#DPR #Image5_container
+{
+    z-index:58;
+}
+#DPR #Image3_container
+{
+    z-index:56;
+}
+#DPR #label12_container
+{
+    z-index:14;
+}
+#DPR #label3_container
+{
+    z-index:8;
+}
+#DPR #Image9_container
+{
+    z-index:62;
+}
+#DPR #label27_container
+{
+    z-index:80;
+}
+#DPR #Relationship_container
+{
+    z-index:25;
+}
+#DPR #Relationship
+{
+    float:left;
+    z-index:25;
+}
+#DPR #Image4_container
+{
+    z-index:57;
+}
+#DPR #Phone1_container
+{
+    z-index:28;
+}
+#DPR #Phone1
+{
+    float:left;
+    z-index:28;
+}
+#DPR #Phone2_container
+{
+    z-index:27;
+}
+#DPR #Phone2
+{
+    float:left;
+    z-index:27;
+}
+#DPR #Prospective_Domicile_State_container
+{
+    z-index:30;
+}
+#DPR #Prospective_Domicile_State
+{
+    float:left;
+    z-index:30;
+}
+#DPR #Prospective_City_container
+{
+    z-index:31;
+}
+#DPR #Prospective_City
+{
+    float:left;
+    z-index:31;
+}
+#DPR #label6_container
+{
+    z-index:11;
+}
+#DPR #Interested_Course_container
+{
+    z-index:32;
+}
+#DPR #Interested_Course
+{
+    float:left;
+    z-index:32;
+}
+#DPR #Interested_Course_Others_container
+{
+    z-index:33;
+}
+#DPR #Interested_Course_Others
+{
+    float:left;
+    z-index:33;
+}
+#DPR #Image6_container
+{
+    z-index:59;
+}
+#DPR #label8_container
+{
+    z-index:12;
+}
+#DPR #label11_container
+{
+    z-index:13;
+}
+#DPR #Image8_container
+{
+    z-index:61;
+}
+#DPR #Image7_container
+{
+    z-index:60;
+}
+#DPR #label16_container
+{
+    z-index:29;
+}
+#DPR #label5_container
+{
+    z-index:10;
+}
+#DPR #label19_container
+{
+    z-index:73;
+}
+#DPR #Interested_State1_container
+{
+    z-index:51;
+}
+#DPR #Interested_State1
+{
+    float:left;
+    z-index:51;
+}
+#DPR #Interested_State2_container
+{
+    z-index:50;
+}
+#DPR #Interested_State2
+{
+    float:left;
+    z-index:50;
+}
+#DPR #Interested_State3_container
+{
+    z-index:49;
+}
+#DPR #Interested_State3
+{
+    float:left;
+    z-index:49;
+}
+#DPR #box_element1
+{
+    z-index:4;
+    border:none;
+    background-color:#ffff00;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+#DPR #label15_container
+{
+    z-index:26;
+}
+#DPR #Image10_container
+{
+    z-index:63;
+}
+#DPR #label18_container
+{
+    z-index:72;
+}
+#DPR #label4_container
+{
+    z-index:9;
+}
+#DPR #Image11_container
+{
+    z-index:64;
+}
+#DPR #label20_container
+{
+    z-index:74;
+}
+#DPR #Percentage_10_container
+{
+    z-index:35;
+}
+#DPR #Percentage_10
+{
+    float:left;
+    z-index:35;
+}
+#DPR #Image12_container
+{
+    z-index:65;
+}
+#DPR #Image13_container
+{
+    z-index:66;
+}
+#DPR #label21_container
+{
+    z-index:75;
+}
+#DPR #Percentage_12_container
+{
+    z-index:36;
+}
+#DPR #Percentage_12
+{
+    float:left;
+    z-index:36;
+}
+#DPR #label22_container
+{
+    z-index:76;
+}
+#DPR #Core_Subject1_container
+{
+    z-index:34;
+}
+#DPR #Core_Subject1
+{
+    float:left;
+    z-index:34;
+}
+#DPR #Core_Subject2_container
+{
+    z-index:37;
+}
+#DPR #Core_Subject2
+{
+    float:left;
+    z-index:37;
+}
+#DPR #Core_Subject3_container
+{
+    z-index:38;
+}
+#DPR #Core_Subject3
+{
+    float:left;
+    z-index:38;
+}
+#DPR #Image14_container
+{
+    z-index:67;
+}
+#DPR #label24_container
+{
+    z-index:77;
+}
+#DPR #Enterance_Exam1_container
+{
+    z-index:39;
+}
+#DPR #Enterance_Exam1
+{
+    float:left;
+    z-index:39;
+}
+#DPR #Enterance_Exam2_container
+{
+    z-index:40;
+}
+#DPR #Enterance_Exam2
+{
+    float:left;
+    z-index:40;
+}
+#DPR #Enterance_Exam3_container
+{
+    z-index:41;
+}
+#DPR #Enterance_Exam3
+{
+    float:left;
+    z-index:41;
+}
+#DPR #Enterance_Exam4_container
+{
+    z-index:42;
+}
+#DPR #Enterance_Exam4
+{
+    float:left;
+    z-index:42;
+}
+#DPR #box_element2
+{
+    z-index:2;
+    border:none;
+    background-color:#00ffff;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+#DPR #label23_container
+{
+    z-index:44;
+}
+#DPR #Image15_container
+{
+    z-index:68;
+}
+#DPR #label17_container
+{
+    z-index:71;
+}
+#DPR #Prospective_Budget_container
+{
+    z-index:43;
+}
+#DPR #Prospective_Budget
+{
+    float:left;
+    z-index:43;
+}
+#DPR #Image16_container
+{
+    z-index:69;
+}
+#DPR #label26_container
+{
+    z-index:79;
+}
+#DPR #Reg_by_Date_container
+{
+    z-index:45;
+}
+#DPR #Reg_by_Date
+{
+    float:left;
+    z-index:45;
+}
+#DPR #Reg_By_Month_container
+{
+    z-index:46;
+}
+#DPR #Reg_By_Month
+{
+    float:left;
+    z-index:46;
+}
+#DPR #Reg_By_Year_container
+{
+    z-index:47;
+}
+#DPR #Reg_By_Year
+{
+    float:left;
+    z-index:47;
+}
+#DPR #Image17_container
+{
+    z-index:70;
+}
+#DPR #label25_container
+{
+    z-index:78;
+}
+#DPR #Remarks_container
+{
+    z-index:48;
+}
+#DPR #Remarks
+{
+    height:86px;
+}
+#DPR #Remarks
+{
+    float:left;
+    z-index:48;
+}
+#DPR #Submit_container
+{
+    z-index:52;
+}
+#DPR #DPR_Submit_img
+{
+    width:408px;
+    height:25px;
+    border:none;
+}
+#DPR #box_element3
+{
+    z-index:1;
+    border:none;
+    background-color:#98fb98;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+
+#DPR #DPR_outer_div_p1
+{
+    width:408px;
+    height:706px;
+}
+#DPR #label13_container
+{
+    position:absolute;
+    left:18px;
+    top:4px;
+}
+#DPR #label13_container
+{
+    width:373px;
+    height:20px;
+}
+#DPR #label13
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#DPR #Image_container
+{
+    position:absolute;
+    left:65px;
+    top:30px;
+    width:12px;
+    height:12px;
+}
+#DPR #Image1_container
+{
+    position:absolute;
+    left:213px;
+    top:30px;
+    width:12px;
+    height:12px;
+}
+#DPR #Image2_container
+{
+    position:absolute;
+    left:338px;
+    top:30px;
+    width:12px;
+    height:12px;
+}
+#DPR #Emp_Code_container
+{
+    position:absolute;
+    left:8px;
+    top:47px;
+}
+#DPR #Emp_Code
+{
+    width:114px;
+    height:19px;
+}
+#DPR #DPR_Number_container
+{
+    position:absolute;
+    left:142px;
+    top:47px;
+}
+#DPR #DPR_Number
+{
+    width:114px;
+    height:19px;
+}
+#DPR #DPR_Month_container
+{
+    position:absolute;
+    left:275px;
+    top:47px;
+}
+#DPR #DPR_Month
+{
+    width:120px;
+    height:22px;
+}
+#DPR #label1_container
+{
+    position:absolute;
+    left:276px;
+    top:29px;
+}
+#DPR #label1_container
+{
+    width:94px;
+    height:20px;
+}
+#DPR #label1
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label2_container
+{
+    position:absolute;
+    left:8px;
+    top:29px;
+}
+#DPR #label2_container
+{
+    width:94px;
+    height:20px;
+}
+#DPR #label2
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label_container
+{
+    position:absolute;
+    left:142px;
+    top:29px;
+}
+#DPR #label_container
+{
+    width:94px;
+    height:20px;
+}
+#DPR #label
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #box_element
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:408px;
+    height:80px;
+}
+#DPR #Prospective_Name_container
+{
+    position:absolute;
+    left:8px;
+    top:130px;
+}
+#DPR #Prospective_Name
+{
+    width:189px;
+    height:19px;
+}
+#DPR #DOB_Date_container
+{
+    position:absolute;
+    left:216px;
+    top:130px;
+}
+#DPR #DOB_Date
+{
+    width:59px;
+    height:22px;
+}
+#DPR #DOB_Month_container
+{
+    position:absolute;
+    left:278px;
+    top:130px;
+}
+#DPR #DOB_Month
+{
+    width:58px;
+    height:22px;
+}
+#DPR #DOB_Year_container
+{
+    position:absolute;
+    left:340px;
+    top:130px;
+}
+#DPR #DOB_Year
+{
+    width:59px;
+    height:22px;
+}
+#DPR #label14_container
+{
+    position:absolute;
+    left:8px;
+    top:86px;
+}
+#DPR #label14_container
+{
+    width:392px;
+    height:20px;
+}
+#DPR #label14
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#DPR #Enquiry_By_container
+{
+    position:absolute;
+    left:8px;
+    top:180px;
+}
+#DPR #Enquiry_By
+{
+    width:189px;
+    height:19px;
+}
+#DPR #Image5_container
+{
+    position:absolute;
+    left:309px;
+    top:112px;
+    width:12px;
+    height:12px;
+}
+#DPR #Image3_container
+{
+    position:absolute;
+    left:106px;
+    top:113px;
+    width:12px;
+    height:12px;
+}
+#DPR #label12_container
+{
+    position:absolute;
+    left:216px;
+    top:112px;
+}
+#DPR #label12_container
+{
+    width:119px;
+    height:20px;
+}
+#DPR #label12
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label3_container
+{
+    position:absolute;
+    left:8px;
+    top:112px;
+}
+#DPR #label3_container
+{
+    width:119px;
+    height:20px;
+}
+#DPR #label3
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Image9_container
+{
+    position:absolute;
+    left:284px;
+    top:163px;
+    width:12px;
+    height:12px;
+}
+#DPR #label27_container
+{
+    position:absolute;
+    left:216px;
+    top:162px;
+}
+#DPR #label27_container
+{
+    width:80px;
+    height:20px;
+}
+#DPR #label27
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Relationship_container
+{
+    position:absolute;
+    left:216px;
+    top:180px;
+}
+#DPR #Relationship
+{
+    width:182px;
+    height:22px;
+}
+#DPR #Image4_container
+{
+    position:absolute;
+    left:69px;
+    top:164px;
+    width:12px;
+    height:12px;
+}
+#DPR #Phone1_container
+{
+    position:absolute;
+    left:9px;
+    top:230px;
+}
+#DPR #Phone1
+{
+    width:176px;
+    height:19px;
+}
+#DPR #Phone2_container
+{
+    position:absolute;
+    left:216px;
+    top:230px;
+}
+#DPR #Phone2
+{
+    width:176px;
+    height:19px;
+}
+#DPR #Prospective_Domicile_State_container
+{
+    position:absolute;
+    left:9px;
+    top:280px;
+}
+#DPR #Prospective_Domicile_State
+{
+    width:180px;
+    height:22px;
+}
+#DPR #Prospective_City_container
+{
+    position:absolute;
+    left:216px;
+    top:280px;
+}
+#DPR #Prospective_City
+{
+    width:176px;
+    height:19px;
+}
+#DPR #label6_container
+{
+    position:absolute;
+    left:9px;
+    top:162px;
+}
+#DPR #label6_container
+{
+    width:94px;
+    height:20px;
+}
+#DPR #label6
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Interested_Course_container
+{
+    position:absolute;
+    left:9px;
+    top:360px;
+}
+#DPR #Interested_Course
+{
+    width:180px;
+    height:22px;
+}
+#DPR #Interested_Course_Others_container
+{
+    position:absolute;
+    left:215px;
+    top:360px;
+}
+#DPR #Interested_Course_Others
+{
+    width:176px;
+    height:19px;
+}
+#DPR #Image6_container
+{
+    position:absolute;
+    left:168px;
+    top:212px;
+    width:12px;
+    height:12px;
+}
+#DPR #label8_container
+{
+    position:absolute;
+    left:9px;
+    top:212px;
+}
+#DPR #label8_container
+{
+    width:184px;
+    height:20px;
+}
+#DPR #label8
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label11_container
+{
+    position:absolute;
+    left:216px;
+    top:212px;
+}
+#DPR #label11_container
+{
+    width:178px;
+    height:20px;
+}
+#DPR #label11
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Image8_container
+{
+    position:absolute;
+    left:282px;
+    top:262px;
+    width:12px;
+    height:12px;
+}
+#DPR #Image7_container
+{
+    position:absolute;
+    left:153px;
+    top:264px;
+    width:12px;
+    height:12px;
+}
+#DPR #label16_container
+{
+    position:absolute;
+    left:216px;
+    top:262px;
+}
+#DPR #label16_container
+{
+    width:159px;
+    height:20px;
+}
+#DPR #label16
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label5_container
+{
+    position:absolute;
+    left:9px;
+    top:262px;
+}
+#DPR #label5_container
+{
+    width:159px;
+    height:20px;
+}
+#DPR #label5
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label19_container
+{
+    position:absolute;
+    left:9px;
+    top:391px;
+}
+#DPR #label19_container
+{
+    width:93px;
+    height:20px;
+}
+#DPR #label19
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Interested_State1_container
+{
+    position:absolute;
+    left:9px;
+    top:409px;
+}
+#DPR #Interested_State1
+{
+    width:127px;
+    height:22px;
+}
+#DPR #Interested_State2_container
+{
+    position:absolute;
+    left:139px;
+    top:409px;
+}
+#DPR #Interested_State2
+{
+    width:127px;
+    height:22px;
+}
+#DPR #Interested_State3_container
+{
+    position:absolute;
+    left:269px;
+    top:409px;
+}
+#DPR #Interested_State3
+{
+    width:127px;
+    height:22px;
+}
+#DPR #box_element1
+{
+    position:absolute;
+    left:0px;
+    top:83px;
+    width:408px;
+    height:229px;
+}
+#DPR #label15_container
+{
+    position:absolute;
+    left:4px;
+    top:317px;
+}
+#DPR #label15_container
+{
+    width:390px;
+    height:20px;
+}
+#DPR #label15
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#DPR #Image10_container
+{
+    position:absolute;
+    left:120px;
+    top:343px;
+    width:12px;
+    height:12px;
+}
+#DPR #label18_container
+{
+    position:absolute;
+    left:216px;
+    top:342px;
+}
+#DPR #label18_container
+{
+    width:135px;
+    height:20px;
+}
+#DPR #label18
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #label4_container
+{
+    position:absolute;
+    left:9px;
+    top:342px;
+}
+#DPR #label4_container
+{
+    width:133px;
+    height:20px;
+}
+#DPR #label4
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Image11_container
+{
+    position:absolute;
+    left:101px;
+    top:391px;
+    width:12px;
+    height:12px;
+}
+#DPR #label20_container
+{
+    position:absolute;
+    left:8px;
+    top:441px;
+}
+#DPR #label20_container
+{
+    width:49px;
+    height:20px;
+}
+#DPR #label20
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Percentage_10_container
+{
+    position:absolute;
+    left:8px;
+    top:459px;
+}
+#DPR #Percentage_10
+{
+    width:37px;
+    height:19px;
+}
+#DPR #Image12_container
+{
+    position:absolute;
+    left:45px;
+    top:439px;
+    width:12px;
+    height:12px;
+}
+#DPR #Image13_container
+{
+    position:absolute;
+    left:204px;
+    top:442px;
+    width:12px;
+    height:12px;
+}
+#DPR #label21_container
+{
+    position:absolute;
+    left:62px;
+    top:441px;
+}
+#DPR #label21_container
+{
+    width:49px;
+    height:20px;
+}
+#DPR #label21
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Percentage_12_container
+{
+    position:absolute;
+    left:62px;
+    top:459px;
+}
+#DPR #Percentage_12
+{
+    width:37px;
+    height:19px;
+}
+#DPR #label22_container
+{
+    position:absolute;
+    left:128px;
+    top:441px;
+}
+#DPR #label22_container
+{
+    width:89px;
+    height:20px;
+}
+#DPR #label22
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Core_Subject1_container
+{
+    position:absolute;
+    left:128px;
+    top:459px;
+}
+#DPR #Core_Subject1
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Core_Subject2_container
+{
+    position:absolute;
+    left:218px;
+    top:459px;
+}
+#DPR #Core_Subject2
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Core_Subject3_container
+{
+    position:absolute;
+    left:308px;
+    top:459px;
+}
+#DPR #Core_Subject3
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Image14_container
+{
+    position:absolute;
+    left:153px;
+    top:491px;
+    width:12px;
+    height:12px;
+}
+#DPR #label24_container
+{
+    position:absolute;
+    left:8px;
+    top:491px;
+}
+#DPR #label24_container
+{
+    width:160px;
+    height:20px;
+}
+#DPR #label24
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Enterance_Exam1_container
+{
+    position:absolute;
+    left:8px;
+    top:509px;
+}
+#DPR #Enterance_Exam1
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Enterance_Exam2_container
+{
+    position:absolute;
+    left:107px;
+    top:509px;
+}
+#DPR #Enterance_Exam2
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Enterance_Exam3_container
+{
+    position:absolute;
+    left:208px;
+    top:509px;
+}
+#DPR #Enterance_Exam3
+{
+    width:82px;
+    height:19px;
+}
+#DPR #Enterance_Exam4_container
+{
+    position:absolute;
+    left:308px;
+    top:509px;
+}
+#DPR #Enterance_Exam4
+{
+    width:82px;
+    height:19px;
+}
+#DPR #box_element2
+{
+    position:absolute;
+    left:0px;
+    top:314px;
+    width:408px;
+    height:229px;
+}
+#DPR #label23_container
+{
+    position:absolute;
+    left:9px;
+    top:550px;
+}
+#DPR #label23_container
+{
+    width:390px;
+    height:20px;
+}
+#DPR #label23
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    width:100%;
+    text-align:center;
+}
+#DPR #Image15_container
+{
+    position:absolute;
+    left:111px;
+    top:576px;
+    width:12px;
+    height:12px;
+}
+#DPR #label17_container
+{
+    position:absolute;
+    left:8px;
+    top:575px;
+}
+#DPR #label17_container
+{
+    width:125px;
+    height:20px;
+}
+#DPR #label17
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Prospective_Budget_container
+{
+    position:absolute;
+    left:8px;
+    top:593px;
+}
+#DPR #Prospective_Budget
+{
+    width:98px;
+    height:19px;
+}
+#DPR #Image16_container
+{
+    position:absolute;
+    left:192px;
+    top:597px;
+    width:12px;
+    height:12px;
+}
+#DPR #label26_container
+{
+    position:absolute;
+    left:8px;
+    top:625px;
+}
+#DPR #label26_container
+{
+    width:166px;
+    height:20px;
+}
+#DPR #label26
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Reg_by_Date_container
+{
+    position:absolute;
+    left:8px;
+    top:643px;
+}
+#DPR #Reg_by_Date
+{
+    width:59px;
+    height:22px;
+}
+#DPR #Reg_By_Month_container
+{
+    position:absolute;
+    left:70px;
+    top:643px;
+}
+#DPR #Reg_By_Month
+{
+    width:58px;
+    height:22px;
+}
+#DPR #Reg_By_Year_container
+{
+    position:absolute;
+    left:131px;
+    top:643px;
+}
+#DPR #Reg_By_Year
+{
+    width:59px;
+    height:22px;
+}
+#DPR #Image17_container
+{
+    position:absolute;
+    left:151px;
+    top:624px;
+    width:12px;
+    height:12px;
+}
+#DPR #label25_container
+{
+    position:absolute;
+    left:144px;
+    top:598px;
+}
+#DPR #label25_container
+{
+    width:60px;
+    height:20px;
+}
+#DPR #label25
+{
+    position:absolute;
+    top:3px;
+    left:0px;
+    text-align:left;
+}
+#DPR #Remarks_container
+{
+    position:absolute;
+    left:204px;
+    top:580px;
+}
+#DPR #Remarks
+{
+    width:186px;
+    height:80px;
+}
+#DPR #Submit_container
+{
+
+    position:absolute;
+    left:0px;
+    top:679px;
+    width:408px;
+    height:25px;
+}
+#DPR #box_element3
+{
+    position:absolute;
+    left:0px;
+    top:546px;
+    width:408px;
+    height:131px;
+}

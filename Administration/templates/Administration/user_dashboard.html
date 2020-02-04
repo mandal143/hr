@@ -1,0 +1,230 @@
+<html>
+{% load static %}
+
+<title></title>
+
+<script src={% static "js/form_validations_marketing.js" %}></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href={% static "css/jquery.dataTables.min.css" %}>
+<link rel="stylesheet" href={% static "css/w3.css" %}>
+<link rel="stylesheet" href={% static "fonts/Raleway/Raleway-Regular.ttf" %}>
+<link href={% static "font-awesome-4.7.0/css/font-awesome.min.css" %} rel="stylesheet">
+<link rel="stylesheet" href={% static "css/jquery-confirm.min.css" %}>
+<link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
+<script src={% static "js/jquery.min.js" %}></script>
+<script src={% static "js/jquery.min.1.7.1.js" %}></script>
+<script type="text/javascript" src={% static "js/jquery.dataTables.min.js" %} ></script>
+<script type="text/javascript" src={% static "js/bootstrap.min.js" %} ></script>
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 1%;
+	position: relative;
+}
+table {
+    border-spacing: 15px;
+	
+}
+
+/* The Modal (background) */
+
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 82%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+<!-- Switch -->
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 2;
+  left: 5;
+  right: 390;
+  bottom: 4;
+  background-color: #DD0F0F;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #0B9611;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+</style>
+
+
+<body class="w3-light-grey">
+
+
+
+<script>
+$(document).ready(function(){
+    
+    $('#enquiryTable').dataTable({
+  aaSorting: [[1, 'asc']]
+});
+
+});
+
+
+</script>
+
+
+
+
+
+<div class="w3-bar w3-top w3-khaki w3-large" style="z-index:4">
+ 
+  <a href="{% url 'Administration:home_page' id=user.id %}"><button id="homepage" name="homepage" class="w3-button w3-red"><b>Home Page</b></button></a> 
+
+  <span class="w3-bar-item w3-left"><b>Welcome: {{ user.username }} </b></a></span>
+    
+  
+  <!-- <span class="w3-bar-item w3-right"><button id="logoutBtn" name="logoutBtn" class="w3-button w3-red"><a href="{% url 'polls:Logout' id=user.id %}"><b>Logout</b></a></button></span> -->
+ 
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+<div class="w3-container w3-responsive">
+
+{% if user_lists %}
+<table class="table table-striped" id="enquiryTable">
+<thead>
+<tr>
+  
+  <th>User name</th>
+  <th>Employee Name</th>
+  <th>Email</th>
+  <th>Activate/Deactivate </th> 
+  
+ 
+</tr>
+</thead>
+<tbody>
+{% for user_list in user_lists %}
+<tr>
+    
+	<td>{{ user_list.username }}</td>
+    <td>{{ user_list.get_full_name }}</td>
+    <td>{{ user_list.email  }}</td>
+   
+    {% if user_list.is_active  %}
+     <td>
+	
+	 <label class="switch">     
+	 <input type="checkbox"  onchange="window.location.href='{% url 'Administration:user_deactivate' user_id=user_list.id id=user.id %}'" checked >
+     <span class="slider round"></span>
+     </label>
+	
+	 </td>
+    {% elif not user_list.is_active %}
+     <td>
+	
+	<label class="switch">
+	 <input type="checkbox"   onchange="window.location.href='{% url 'Administration:user_activate' user_id=user_list.id id=user.id %}'" unchecked >
+     <span class="slider round"></span>
+     </label> 
+	
+	 </td>
+	 {% else %}
+	 <td>NA </td>
+
+     {% endif %}
+   
+   
+  
+       
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+{% else %}
+  <p>No Employee details are available</p>
+{% endif %}	
+
+</div>
+
+
+
+
+
+
+</body>
+
