@@ -178,6 +178,6 @@ def grievance_add_save(request,id):
 def payroll_dashboard(request,id):
     user =  User.objects.get(id=id)
     payroll = Payrolls.objects.filter(user=user)
-    return render(request, app + '/Payroll_dashboard.html', {'payroll_lists': payroll, 'user': user  })
+    return render(request, app + '/payroll_dashboard.html', {'payroll_lists': payroll, 'user': user  })
 	
 	
