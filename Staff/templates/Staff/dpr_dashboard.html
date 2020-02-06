@@ -37,6 +37,8 @@ table {
     padding: 20px;
     border: 1px solid #888;
     width: 82%;
+	overflow-y: scroll;
+	overflow-x: scroll;
 }
 
 /* The Close Button */
@@ -95,7 +97,6 @@ $(document).ready(function(){
   <th>DPR Number</th>
   <th>DPR Month</th>
   <th>Pros Name</th>
-  <th>Pros Ph No</th>
   <th>View Details</th>
 </tr>
 </thead>
@@ -109,11 +110,11 @@ $(document).ready(function(){
 	<td>{{ enquiry.dpr_no }}</td>
 	<td>{{ enquiry.dpr_month }}</td>
 	<td>{{ enquiry.pros_name }}</td>
-	<td>{{ enquiry.phone1 }}</td>
+	
     <td> <button type="button" class="btn  btn-success"  onclick="updateCostModal(enquiry_id='{{ enquiry.enquiry_id }}',enquiry_date='{{ enquiry.enquiry_date }}', emp_code='{{enquiry.emp_code}}',
             dpr_no='{{enquiry.dpr_no}}', dpr_month='{{enquiry.dpr_month}}', pros_name='{{enquiry.pros_name}}', pros_date='{{enquiry.pros_date}}', 
             pros_month='{{enquiry.pros_month}}',pros_year='{{enquiry.pros_year}}',enquiry_by='{{enquiry.enquiry_by}}',relation='{{enquiry.relation}}',
-            phone1='{{enquiry.phone1}}', phone2='{{enquiry.phone2}}', pros_state='{{enquiry.pros_state}}',pros_city='{{enquiry.pros_city}}',
+            pros_state='{{enquiry.pros_state}}',pros_city='{{enquiry.pros_city}}',
             pros_course='{{enquiry.pros_course}}',pros_other='{{enquiry.pros_other}}',pros_interest_states_1='{{enquiry.pros_interest_states_1}}',
             pros_interest_states_2='{{enquiry.pros_interest_states_2}}',pros_interest_states_3='{{enquiry.pros_interest_states_3}}',
             pros_10_marks='{{enquiry.pros_10_marks}}',pros_12_marks='{{enquiry.pros_12_marks}}', pros_subject_1='{{enquiry.pros_subject_1}}',
@@ -183,12 +184,12 @@ $(document).ready(function(){
     </div>
 
 
-    <div class="w3-col" style="width:5%">
+    <div class="w3-col" style="width:10%">
 	  <label for="pros_date">  DOB:: </label>
       <input id="pros_date" name="pros_date" class="w3-input w3-border w3-grey" value="" type="text" placeholder="not given"  readonly="">
     </div>
 
-    <div class="w3-col" style="width:5%">
+    <div class="w3-col" style="width:10%">
 	  <label for="pros_month">  Month:: </label>
       <input id="pros_month" name="pros_month" class="w3-input w3-border w3-grey" value="" type="text"  placeholder="not given" readonly="">
     </div>
@@ -198,25 +199,25 @@ $(document).ready(function(){
       <input id="pros_year" name="pros_year" class="w3-input w3-border w3-grey" value=""  type="text" placeholder="not given" readonly="" >
    </div>
    
-   <div class="w3-col" style="width:20%">
+   <div class="w3-col" style="width:25%">
 	  <label for="enquiry_by"> Enquiry By:: </label>
       <input id="enquiry_by" name="enquiry_by" class="w3-input w3-border w3-grey" value="" type="text"  placeholder="not given" readonly="">
    </div>
    
-   <div class="w3-col" style="width:15%">
+   <div class="w3-col" style="width:25%">
 	  <label for="relation"> Relationship:: </label>
       <input id="relation" name="relation" class="w3-input w3-border w3-grey" value="" type="text"  placeholder="not given" readonly="">
    </div>
    
-   <div class="w3-col" style="width:12.5%">
-	  <label for="phone1"> Phone 1:: </label>
-      <input id="phone1" name="phone1" class="w3-input w3-border w3-grey" value="" type="text" placeholder="not given"  readonly="">
-   </div>
+   <!-- <div class="w3-col" style="width:12.5%"> -->
+	  <!-- <label for="phone1"> Phone 1:: </label> -->
+      <!-- <input id="phone1" name="phone1" class="w3-input w3-border w3-grey" value="" type="text" placeholder="not given"  readonly=""> -->
+   <!-- </div> -->
    
-   <div class="w3-col" style="width:12.5%">
-	  <label for="phone2"> Phone 2:: </label>
-      <input id="phone2" name="phone2" class="w3-input w3-border w3-grey" value="" type="text"  placeholder="not given" readonly="">
-   </div>
+   <!-- <div class="w3-col" style="width:12.5%"> -->
+	  <!-- <label for="phone2"> Phone 2:: </label> -->
+      <!-- <input id="phone2" name="phone2" class="w3-input w3-border w3-grey" value="" type="text"  placeholder="not given" readonly=""> -->
+   <!-- </div> -->
    
 </div>
 
@@ -380,7 +381,7 @@ $(document).ready(function(){
 <script>
 
 function updateCostModal(enquiry_id,enquiry_date,emp_code,dpr_no,dpr_month,pros_name,pros_date,pros_month,pros_year,enquiry_by,relation,
-                 phone1,phone2,pros_state,pros_city,pros_course,pros_other,pros_interest_states_1,pros_interest_states_2,pros_interest_states_3,
+                 pros_state,pros_city,pros_course,pros_other,pros_interest_states_1,pros_interest_states_2,pros_interest_states_3,
                  pros_10_marks,pros_12_marks,pros_subject_1,pros_subject_2,pros_subject_3,pros_entrance_exam1,pros_entrance_exam2,
                  pros_entrance_exam3,pros_entrance_exam4,pros_budget,pros_register_date,pros_register_month,pros_register_year,pros_register_remarks) {
                
@@ -396,8 +397,6 @@ function updateCostModal(enquiry_id,enquiry_date,emp_code,dpr_no,dpr_month,pros_
     document.getElementById('pros_year').value = pros_year;
     document.getElementById('enquiry_by').value = enquiry_by;
     document.getElementById('relation').value = relation;
-    document.getElementById('phone1').value = phone1;
-    document.getElementById('phone2').value = phone2;
     document.getElementById('pros_state').value = pros_state;
     document.getElementById('pros_city').value = pros_city;
     document.getElementById('pros_course').value = pros_course;
