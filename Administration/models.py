@@ -44,6 +44,16 @@ class Enquiries(models.Model):
     pros_register_month = models.CharField(max_length=5000,default='')
     pros_register_year = models.CharField(max_length=5000,default='')
     pros_register_remarks = models.CharField(max_length=5000,default='')
+    pros_register_status1 = models.CharField(max_length=5000,default='')
+    pros_register_status2 = models.CharField(max_length=5000,default='')
+    pros_register_status3 = models.CharField(max_length=5000,default='')
+    pros_register_status4 = models.CharField(max_length=5000,default='')
+    pros_register_status5 = models.CharField(max_length=5000,default='')
+    pros_register_status6 = models.CharField(max_length=5000,default='')
+    pros_register_status7 = models.CharField(max_length=5000,default='')
+    pros_register_status8 = models.CharField(max_length=5000,default='')
+    pros_register_status9 = models.CharField(max_length=5000,default='')
+    pros_register_status10 = models.CharField(max_length=5000,default='')
 	
     def __str__(self):
         return str(self.enquiry_id)

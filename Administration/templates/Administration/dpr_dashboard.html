@@ -97,6 +97,7 @@ $(document).ready(function(){
   <th>Pros Name</th>
   <th>Pros Ph No</th>
   <th>View Details</th>
+  <th>Add/View Status</th>					  
 </tr>
 </thead>
 <tbody>
@@ -122,6 +123,8 @@ $(document).ready(function(){
             pros_entrance_exam4 ='{{enquiry.pros_entrance_exam4}}',pros_budget = '{{enquiry.pros_budget}}',
             pros_register_date = '{{enquiry.pros_register_date}}', pros_register_month = '{{enquiry.pros_register_month}}',pros_register_year = '{{enquiry.pros_register_year}}',
             pros_register_remarks='{{enquiry.pros_register_remarks}}');">View Details</button></td>   
+    <td> <a href="{% url 'Administration:dpr_status_form'  enquiry_id=enquiry.enquiry_id id=user.id %}"><button id="homepage" name="homepage"  class="w3-button w3-teal"><b> Status </b></button></a></td>			
+	
 </tr>
 {% endfor %}
 </tbody>

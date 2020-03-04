@@ -14,6 +14,8 @@ urlpatterns = [
 	#DPR
 	path('dpr_dashboard/^(?P<id>\w+)/$', views.dpr_dashboard, name='dpr_dashboard'),
 	path('export_users_csv/$', views.export_users_csv, name='export_users_csv'),
+	path('dpr_status_form/^(?P<enquiry_id>\w+)/^(?P<id>\w+)/$', views.dpr_status_form, name='dpr_status_form'),
+	path('dpr_status_form_save/^(?P<enquiry_id>\w+)/^(?P<id>\w+)/$', views.dpr_status_form_save, name='dpr_status_form_save'),																										
 	
 	#HOLIDAY
 	path('holiday_dashboard/^(?P<id>\w+)/$', views.holiday_dashboard, name='holiday_dashboard'),
