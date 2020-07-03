@@ -66,6 +66,7 @@ class Holidays(models.Model):
     holiday_date = models.CharField(max_length=2500, default='')
     holiday_day = models.CharField(max_length=2500, default='')
     holiday_reason = models.CharField(max_length=2500,default='')
+    holiday_city = models.CharField(max_length=2500,default='')
 	
     def __str__(self):
         return str(self.holiday_id)

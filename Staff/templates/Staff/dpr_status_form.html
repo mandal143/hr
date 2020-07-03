@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+</style>
+</head>
+<body>
+
+<span class="w3-bar-item w3-left"><button onclick="goBack()">Go Back</button></span>
+<h3> Update Form</h3>
+user : {{ user }} 
+<div class="container">
+  <form method='post' action="{% url 'Staff:dpr_status_form_save' enquiry_id=enquiry_id.enquiry_id id=user.id %}" enctype="multipart/form-data">
+    
+ {% if  enquiry_id.pros_register_status1 == '' %}
+   Remark 1:<br>
+  <textarea type="text" name="pros_register_status1" placeholder="Remark 1" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 1:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status1 }}</textarea>
+  <br>
+ {% endif %}
+  
+ {% if  enquiry_id.pros_register_status2 == '' %}
+   Remark 2:<br>
+  <textarea type="text" name="pros_register_status2" placeholder="Remark 2" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 2:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status2 }}</textarea>
+  <br>
+ {% endif %}
+  
+ {% if  enquiry_id.pros_register_status3 == '' %}
+   Remark 3:<br>
+  <textarea type="text" name="pros_register_status3" placeholder="Remark 3" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 3:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status3 }}</textarea>
+  <br>
+ {% endif %}
+  
+  {% if  enquiry_id.pros_register_status4 == '' %}
+   Remark 4:<br>
+  <textarea type="text" name="pros_register_status4" placeholder="Remark 4" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 4:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status4 }}</textarea>
+  <br>
+ {% endif %}
+ 
+ {% if  enquiry_id.pros_register_status5 == '' %}
+   Remark 5:<br>
+  <textarea type="text" name="pros_register_status5" placeholder="Remark 5" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 5:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status5 }}</textarea>
+  <br>
+ {% endif %}
+  
+  {% if  enquiry_id.pros_register_status6 == '' %}
+   Remark 6:<br>
+  <textarea type="text" name="pros_register_status6" placeholder="Remark 6" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 6:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status6 }}</textarea>
+  <br>
+ {% endif %}
+ 
+ {% if  enquiry_id.pros_register_status7 == '' %}
+   Remark 7:<br>
+  <textarea type="text" name="pros_register_status7" placeholder="Remark 7" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 7:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status7 }}</textarea>
+  <br>
+ {% endif %}
+ 
+ {% if  enquiry_id.pros_register_status8 == '' %}
+   Remark 8:<br>
+  <textarea type="text" name="pros_register_status8" placeholder="Remark 8" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 8:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status8 }}</textarea>
+  <br>
+ {% endif %}
+ 
+ {% if  enquiry_id.pros_register_status9 == '' %}
+   Remark 9:<br>
+  <textarea type="text" name="pros_register_status9" placeholder="Remark 9" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 9:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status9 }}</textarea>
+  <br>
+ {% endif %}
+ 
+ {% if  enquiry_id.pros_register_status10 == '' %}
+   Remark 10:<br>
+  <textarea type="text" name="pros_register_status10" placeholder="Remark 10" value=""></textarea>
+  <br>
+  {% else %}
+   Remark 10:<br>
+ <textarea type="text" style="background-color:grey;font-size: 15px;" readonly>{{ enquiry_id.pros_register_status10 }}</textarea>
+  <br>
+ {% endif %}
+  
+   
+
+   <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+</body>
+</html>

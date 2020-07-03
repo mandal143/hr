@@ -4,9 +4,11 @@ from django.contrib.auth import authenticate, login,logout
 from django.urls import reverse
 from polls.models import LoginLogoutLog
 from Administration.models import Enquiries, Holidays, Notices, Grievances, Leaves, Payrolls, SignUpForm
+from .models import TeamLeaders, TeamMembers
 from django.contrib.auth.models import User
 from django.conf import settings
 from datetime import datetime
+from django.utils.datastructures import MultiValueDictKeyError
 from django.utils.timezone import localtime, get_current_timezone
 from django.utils import timezone
 from django.contrib.auth import update_session_auth_hash
@@ -14,6 +16,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils.dateparse import parse_date
+from django.db.models import Subquery
 import pprint
 import csv
 import pytz
@@ -45,9 +48,26 @@ def home_page(request,id):
 
 def dpr_dashboard(request,id):
     user = User.objects.get(id=id)
-    enquiry = Enquiries.objects.filter(emp_code=user)
-    # enquiry = Enquiries.objects.all()
-    return render(request, app + '/dpr_dashboard.html', { 'enquiries_list': enquiry, 'user':user })	
+    
+    pprint.pprint(user)
+   
+    try:
+	    leader = TeamLeaders.objects.get(user=id)
+	    pprint.pprint("we got 1")
+	    member = TeamMembers.objects.get(leader=leader)   
+	    pprint.pprint(member)		
+	    users_all = member.user.all()
+	    pprint.pprint(users_all)
+	    users = [*users_all]
+	    enquiry = Enquiries.objects.filter(emp_code__in=users)
+	    pprint.pprint(enquiry)
+	    pprint.pprint("cccccccccccccccc")
+	    return render(request, app + '/dpr_dashboard_leader.html', { 'enquiries_list': enquiry, 'user':user })	
+		
+    except Exception as e:
+	    pprint.pprint("we got 2")
+	    enquiry = Enquiries.objects.filter(emp_code=user)
+	    return render(request, app + '/dpr_dashboard.html', { 'enquiries_list': enquiry, 'user':user })	
 
 def dpr_form(request,id):
     user = User.objects.get(id=id)
@@ -110,6 +130,122 @@ def dpr_form_save(request,id):
 		# recipient_list = ['chanakya.factor@gmail.com', 'animesh472@gmail.com']
 		# send_mail(subject,message,email_from,recipient_list)
 	    return HttpResponseRedirect(reverse(app+':dpr_dashboard',args=(str(id),)))
+		
+		
+		
+def dpr_status_form(request,enquiry_id,id):
+	user = User.objects.get(id=id)
+	enquiry_id = Enquiries.objects.get(enquiry_id=enquiry_id)
+	pprint.pprint(enquiry_id)
+	return render(request, app + '/dpr_status_form.html', {'user':user, 'enquiry_id':enquiry_id })
+	
+	
+def dpr_status_form_save(request,enquiry_id,id):
+    user = User.objects.get(id=id)
+    id = user.id
+    enquiry = Enquiries.objects.get(enquiry_id=enquiry_id)
+    pprint.pprint(enquiry)
+   
+    try:
+        pros_register_status1 = request.POST['pros_register_status1']
+        pprint.pprint(pros_register_status1)
+        pros_register_status2 = request.POST['pros_register_status2']
+        pros_register_status3 = request.POST['pros_register_status3']
+        pros_register_status4 = request.POST['pros_register_status4']
+        pros_register_status5 = request.POST['pros_register_status5']
+        pros_register_status6 = request.POST['pros_register_status6']
+        pros_register_status7 = request.POST['pros_register_status7']
+        pros_register_status8 = request.POST['pros_register_status8']
+        pros_register_status9 = request.POST['pros_register_status9']
+        pros_register_status10 = request.POST['pros_register_status10']
+       
+        enquiry.pros_register_status1 = pros_register_status1	
+        enquiry.pros_register_status2 = pros_register_status2
+        enquiry.pros_register_status3 = pros_register_status3	
+        enquiry.pros_register_status4 = pros_register_status4	
+        enquiry.pros_register_status5 = pros_register_status5	
+        enquiry.pros_register_status6 = pros_register_status6	
+        enquiry.pros_register_status7 = pros_register_status7	
+        enquiry.pros_register_status8 = pros_register_status8	
+        enquiry.pros_register_status9 = pros_register_status9
+        enquiry.pros_register_status10 = pros_register_status10	
+        enquiry.save()	
+        pprint.pprint("1st time updated")
+        return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+    except MultiValueDictKeyError:
+	    pprint.pprint("i think its geting update")
+	    if 'pros_register_status1' in request.POST:
+		    pprint.pprint(pros_register_status1)
+		    pros_register_status1 = request.POST['pros_register_status1']
+		    enquiry.pros_register_status1 = pros_register_status1
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+	    elif 'pros_register_status2' in request.POST:
+	        pros_register_status2 = request.POST['pros_register_status2']
+	        enquiry.pros_register_status2 = pros_register_status2
+	        enquiry.save()
+	        return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+		
+	    elif 'pros_register_status3' in request.POST:
+		    pros_register_status3 = request.POST['pros_register_status3']
+		    enquiry.pros_register_status3 = pros_register_status3
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+	    elif 'pros_register_status4' in request.POST:
+		    pros_register_status4 = request.POST['pros_register_status4']
+		    enquiry.pros_register_status4 = pros_register_status4
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+		
+	    elif 'pros_register_status5' in request.POST:
+		    pros_register_status5 = request.POST['pros_register_status5']
+		    enquiry.pros_register_status5 = pros_register_status5
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+			
+	    elif 'pros_register_status6' in request.POST:
+		    pros_register_status6 = request.POST['pros_register_status6']
+		    enquiry.pros_register_status6 = pros_register_status6
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+	    elif 'pros_register_status7' in request.POST:
+		    pros_register_status7 = request.POST['pros_register_status7']
+		    enquiry.pros_register_status7 = pros_register_status7
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+			
+	    elif 'pros_register_status8' in request.POST:
+		    pros_register_status8 = request.POST['pros_register_status8']
+		    enquiry.pros_register_status8 = pros_register_status8
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+			
+	    elif 'pros_register_status9' in request.POST:
+		    pros_register_status9 = request.POST['pros_register_status9']
+		    enquiry.pros_register_status9 = pros_register_status9
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+	    
+			
+	    elif 'pros_register_status10' in request.POST:
+		    pros_register_status10 = request.POST['pros_register_status10']
+		    enquiry.pros_register_status10 = pros_register_status10
+		    enquiry.save()
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+		    
+	    else:
+		    return HttpResponseRedirect(reverse(app + ':dpr_dashboard',args=(str(id),)))
+			
+    else:
+	    pprint.pprint("NOTE: Please Check the Entered Deatils")
+	    return render(request, app + '/dpr_status_form.html')
+	
 		
 		
 #HOLIDAY DASHBOARD

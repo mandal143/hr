@@ -12,7 +12,7 @@ class EnquiriesAdmin(admin.ModelAdmin):
 	
 @admin.register(Holidays)
 class HolidaysAdmin(admin.ModelAdmin):
-    list_display = ['holiday_no','holiday_date','holiday_day','holiday_reason']
+    list_display = ['holiday_no','holiday_date','holiday_day','holiday_reason','holiday_city']
     list_filter = ['holiday_no']
 	
 @admin.register(Notices)

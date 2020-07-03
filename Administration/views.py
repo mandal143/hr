@@ -84,8 +84,8 @@ def export_users_csv(request):
 	
     users = Enquiries.objects.order_by('enquiry_id').values_list('enquiry_date','emp_code','dpr_no','dpr_month','pros_name',
                   'phone1','pros_state','pros_course','pros_interest_states_1','pros_interest_states_2','pros_interest_states_3','pros_12_marks',
-                 'pros_budget','pros_register_date','pros_register_month','pros_register_year','pros_register_remarks',
-				 'pros_register_status1','pros_register_status2','pros_register_status3','pros_register_status4','pros_register_status5',
+                  'pros_budget','pros_register_date','pros_register_month','pros_register_year','pros_register_remarks',
+				  'pros_register_status1','pros_register_status2','pros_register_status3','pros_register_status4','pros_register_status5',
 				  'pros_register_status6','pros_register_status7','pros_register_status8','pros_register_status9','pros_register_status10')				   
     for user in users:
         writer.writerow(user)
@@ -226,7 +226,8 @@ def add_holiday_save(request,id):
         holiday_date = request.POST['holiday_date']
         holiday_day = request.POST['holiday_day']
         holiday_reason = request.POST['holiday_reason']
-        holiday = Holidays.objects.create(holiday_no=holiday_no, holiday_date=holiday_date, holiday_day=holiday_day, holiday_reason=holiday_reason)
+        holiday_city = request.POST['holiday_city']
+        holiday = Holidays.objects.create(holiday_no=holiday_no, holiday_date=holiday_date, holiday_day=holiday_day, holiday_reason=holiday_reason, holiday_city=holiday_city)
         return HttpResponseRedirect(reverse(app + ':holiday_dashboard',args=(str(id),)))
     else:
 	    pprint.pprint("NOTE: Please Check the Entered Deatils")
@@ -251,11 +252,13 @@ def holiday_edit_save(request, holiday_id, id):
         holiday_date = request.POST['holiday_date']
         holiday_day = request.POST['holiday_day']
         holiday_reason = request.POST['holiday_reason']
+        holiday_city = request.POST['holiday_city']
         holiday = Holidays.objects.get(holiday_id=holiday_id)
         holiday.holiday_no = holiday_no
         holiday.holiday_date = holiday_date
         holiday.holiday_day = holiday_day
         holiday.holiday_reason = holiday_reason
+        holiday.holiday_city = holiday_city
         holiday.save()
         pprint.pprint("holiday_edit_save Done")
         return HttpResponseRedirect(reverse(app + ':holiday_dashboard',args=(str(id),)))
